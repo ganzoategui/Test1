@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+</html>
+<head>
+    <title>Mi primer Plantilla</title>
+</head>
+<body>
+    {% include "upper/bar.html" %}
+<h1>Estamos en la primner plantilla</h1>
+<p> Que tal {{nom_per}} {{ape_per}}, estamos aprendiendo Django....</p>
+<p><strong>Materias que se ofrecen este semestre son </strong></p>
+<p>
+    <ul>
+    {% if temas %}
+        {% for i in temas %}
+        <li>{{i}}  </li>
+        {% endfor%}
+    {% else %}
+        <p>No hay Materias este semestre </p>
+    {% endif %}
+    </ul>
+</p>
+</body> 
+</html>   
